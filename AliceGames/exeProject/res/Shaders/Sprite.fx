@@ -36,7 +36,7 @@ VS_OUT vs_main(VS_IN In) {
 
 
 // ピクセルシェーダ
-float4 ps_main(VS_OUT In) : COLOR0{
+float4 ps_main(VS_OUT In) : SV_TARGET{
 	float4 color = tex2D(smp, In.uv);
 	color.a *= alpha;
 	return color;
